@@ -31,3 +31,9 @@ src/config/Chave_seguranca_googlesheet.json
 *.json
 .env
 .env.*
+
+node_modules
+.env
+.env.local
+.env.development.local
+dist
