@@ -25,3 +25,9 @@ src/enviroment.json
 *.sw?
 
 .vercel
+
+# 🔐 Secrets / Keys
+src/config/Chave_seguranca_googlesheet.json
+*.json
+.env
+.env.*
