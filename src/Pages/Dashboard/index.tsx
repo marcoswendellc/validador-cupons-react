@@ -50,7 +50,7 @@ export const Dashboard = () => {
             {/* <form className="dashboard__form" onSubmit={handleSubmit}>
               <input
                 type="text"
-                placeholder="Código do cupom"
+                placeholder="Digite o CPF do cliente"
                 className="dashboard__input"
                 onChange={(ele) => setCupom(ele.target.value)}
                 required
@@ -68,7 +68,7 @@ export const Dashboard = () => {
             <form className="dashboard__form" onSubmit={handleSubmit}>
               <input
                 type="text"
-                placeholder="Código do cupom"
+                placeholder="Digite o CPF do cliente"
                 className="dashboard__input"
                 onChange={(ele) => setCupom(ele.target.value)}
                 required
