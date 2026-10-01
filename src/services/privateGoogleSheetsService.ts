@@ -213,12 +213,12 @@ class PrivateGoogleSheetsService {
 
   async atualizarCupomNaPlanilha(data: Cupom, usuario: string): Promise<void> {
     const accessToken = await this.getAccessToken();
-    const range = `Cupons!A${data.row}:F${data.row}`; // Atualiza colunas D, E, F na linha específica
+    const range = `Cupons!D${data.row}:F${data.row}`; // Atualiza colunas D, E, F na linha específica
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${this.SPREADSHEET_ID}/values/${range}?valueInputOption=USER_ENTERED`;
     data.data_resgate = new Date().toLocaleString(); // Atualiza data de resgate para o momento atual
 
     const updateData = {
-      values: [[data.lojista, "Resgatado", data.data_resgate, usuario]],
+      values: [[data.codigo, data.row, data.lojista, "Resgatado", data.data_resgate, usuario]],
     };
 
     const response = await fetch(url, {
