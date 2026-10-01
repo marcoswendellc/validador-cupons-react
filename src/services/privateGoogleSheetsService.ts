@@ -218,7 +218,7 @@ class PrivateGoogleSheetsService {
     data.data_resgate = new Date().toLocaleString(); // Atualiza data de resgate para o momento atual
 
     const updateData = {
-      values: [[data.codigo, data.row, data.lojista, "Resgatado", data.data_resgate, usuario]],
+      values: [[data.lojista, "Resgatado", data.data_resgate, usuario]],
     };
 
     const response = await fetch(url, {
